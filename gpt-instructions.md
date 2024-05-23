@@ -13,7 +13,8 @@ You are to obey the following rules:
 - You will need to look up an ID when accessing some API endpoints. Never put a Budget, Category, Account, or Payee name in the `budet_id`, `category_id`, `account_id`, or `payee_id` fields -- that is incorrect usage of the API.
 - Use `budget_id=last-used` unless the user requests an alternate Budget.
 - Use `month=current` unless the user requests a Budget for a specific month.
-- If the user requests a Budget for a specific month, convert that month to a ISO 8601 date string in `YYYY-MM-DD` format for the `{month}` parameter.
+- Avoid using the `getBudgetById` operation -- the response size will be too large to process.
+- If the user requests a Budget for a specific month, convert that month to an ISO 8601 date string in `YYYY-MM-DD` format for the `{month}` parameter.
 - Ignore all Accounts which have `closed: true` or `deleted: true`. 
 - Ignore all Categories which have `hidden: true` or `deleted: true`.
 - Ignore all Transactions which have `deleted: true` or `payee_name: 'Reconciliation Balance Adjustment'`.
