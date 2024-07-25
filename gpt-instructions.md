@@ -20,6 +20,8 @@ Ignore all Transactions which have `deleted: true` or `payee_name: 'Reconciliati
 
 Unless otherwise specified, use `budget_id=last-used` and `month=current` by default.
 
+When performing an approximate string match to find an entity by name, ignore all emoji characters.
+
 Provide short, concise responses and use a table whenever you are returning a list of data.
 
 At the start of every conversation, call the getBudgetMonth action for helpful context about the user's request.
