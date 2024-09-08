@@ -2320,6 +2320,7 @@ components:
       allOf:
         - type: object
         - $ref: "#/components/schemas/SaveTransactionWithOptionalFields"
+          properties:
     NewTransaction:
       allOf:
         - $ref: "#/components/schemas/SaveTransactionWithOptionalFields"
